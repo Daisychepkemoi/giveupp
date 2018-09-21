@@ -9,7 +9,6 @@
             <h6>Thank you for registering with us please check your email to activate account</h6>
        </div>
        </div>
-     
-      </div>
+    </div>
 
 @endsection

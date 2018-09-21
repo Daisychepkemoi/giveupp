@@ -155,43 +155,43 @@ class ProposalsController extends Controller
     {
         $user = auth()->user();
         $useremail = $user->email;
-        $proposal = Proposal::where('submitted_by', $useremail)->where('stage', 'reject')->orderBy('updated_at', 'desc')->paginate(5);
-        return view('user.user', compact('proposal', 'user'));
+        $proposals = Proposal::where('submitted_by', $useremail)->where('stage', 'reject')->orderBy('updated_at', 'desc')->paginate(5);
+        return view('user.user', compact('proposals', 'user'));
     }
     public function stageoneuser(Proposal $proposal)
     {
         $user = auth()->user();
         $useremail = $user->email;
-        $proposal = Proposal::where('submitted_by', $useremail)->where('stage', 'stageone')->orderBy('updated_at', 'desc')->paginate(5);
-        return view('user.user', compact('proposal', 'user'));
+        $proposals = Proposal::where('submitted_by', $useremail)->where('stage', 'stageone')->orderBy('updated_at', 'desc')->paginate(5);
+        return view('user.user', compact('proposals', 'user'));
     }
     public function userdrafts(Proposal $proposal)
     {
         $user = auth()->user();
         $useremail = $user->email;
-        $proposal = Proposal::where('submitted_by', $useremail)->where('draft', 1)->orderBy('updated_at', 'desc')->paginate(5);
-        return view('user.user', compact('proposal', 'user'));
+        $proposals = Proposal::where('submitted_by', $useremail)->where('draft', 1)->orderBy('updated_at', 'desc')->paginate(5);
+        return view('user.user', compact('proposals', 'user'));
     }
     public function stagetwouser(Proposal $proposal)
     {
         $user = auth()->user();
         $useremail = $user->email;
-        $proposal = Proposal::where('submitted_by', $useremail)->where('stage', 'stagetwo')->orderBy('updated_at', 'desc')->paginate(5);
-        return view('user.user', compact('proposal', 'user'));
+        $proposals = Proposal::where('submitted_by', $useremail)->where('stage', 'stagetwo')->orderBy('updated_at', 'desc')->paginate(5);
+        return view('user.user', compact('proposals', 'user'));
     }
     public function newProposals(Proposal $proposal)
     {
         $user = auth()->user();
         $useremail = $user->email;
-        $proposal = Proposal::where('submitted_by', $useremail)->whereNull('stage')->orderBy('updated_at', 'desc')->paginate(5);
-        return view('user.user', compact('proposal', 'user'));
+        $proposals = Proposal::where('submitted_by', $useremail)->whereNull('stage')->orderBy('updated_at', 'desc')->paginate(5);
+        return view('user.user', compact('proposals', 'user'));
     }
     public function accepteduser(Proposal $proposal)
     {
         $user = auth()->user();
         $useremail = $user->email;
-        $proposal = Proposal::where('submitted_by', $useremail)->where('stage', 'Accepted')->orderBy('updated_at', 'desc')->paginate(5);
-        return view('user.user', compact('proposal', 'user'));
+        $proposals = Proposal::where('submitted_by', $useremail)->where('stage', 'Accepted')->orderBy('updated_at', 'desc')->paginate(5);
+        return view('user.user', compact('proposals', 'user'));
     }
     public function userback()
     {
