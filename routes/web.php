@@ -57,7 +57,7 @@ Route::get('/back','AdminController@goback');
 Route::get('/rejecteduser','ProposalsController@rejected');
 Route::get('/stageoneuser','ProposalsController@stageoneuser');
 Route::get('/stagetwouser','ProposalsController@stagetwouser');
-Route::get('/sentproposals','ProposalsController@view');
+Route::get('/sentproposals','ProposalsController@newproposals');
 Route::get('/accepteduser','ProposalsController@accepteduser');
 Route::get('/userback','ProposalsController@userback');
 Route::get('/userdrafts','ProposalsController@userdrafts');

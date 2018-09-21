@@ -20,7 +20,9 @@
         
         <div class="panel-body" id="contentse">
          <hr>
-         <h6><a href="/sentproposals">Sent Proposals</a></h6>
+         <h6><a href="/userproposal">All Proposals</a></h6>
+         <hr>
+         <h6><a href="/sentproposals">Unreviewed Proposals</a></h6>
          <hr>
          <h6><a href="/userdrafts">Drafts</a></h6>
          <hr>
@@ -73,7 +75,6 @@
               <td> <a href="/userproposal/{{$propose->id}}">{{$propose->title}}</a> </td>
               <td>{{$propose->organization}}</td>
               <td>{{$propose->submitted_by}}</td>
-              
               <td>{{$propose->updated_at->diffForHumans()}}</td>
               @if($propose->draft==1)
               <td><button class="btn btn-primary">Pending </button></td>

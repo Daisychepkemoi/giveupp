@@ -154,7 +154,7 @@ class ProposalsController extends Controller
     {
         $user = auth()->user();
         $useremail = $user->email;
-        $proposals = Proposal::where('submitted_by', $useremail)->where('stage', 'reject')->orderBy('updated_at', 'desc')->paginate(5);
+        $proposals = Proposal::where('submitted_by', $useremail)->where('stage', 'rejected')->orderBy('updated_at', 'desc')->paginate(5);
         return view('user.user', compact('proposals', 'user'));
     }
     public function stageoneuser(Proposal $proposal)
