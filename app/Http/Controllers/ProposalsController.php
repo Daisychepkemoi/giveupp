@@ -12,7 +12,6 @@ use Illuminate\Pagination\Paginator;
 
 class ProposalsController extends Controller
 {
-    public $id;
     public function __construct()
     {
         $this->middleware('auth')->except(['index','activate','activatepage']);
