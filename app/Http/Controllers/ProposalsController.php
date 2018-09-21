@@ -61,7 +61,7 @@ class ProposalsController extends Controller
         $id = $proposal->id;
         switch ($request->input('publish')) {
             case 'save':
-                    $user = DB::table('Users')->where('is_admin', true)->first();
+                    $user = User::where('is_admin',1)->first();
                     $proposal = DB::table('proposals')->where('id', $id)->first();
                     \Mail::to($user->email)->send(new NewProposalAdmin($user));
                     return redirect()->to('/submitproposal/'.$id)->with('success', 'Proposal Submitted Successfully');
