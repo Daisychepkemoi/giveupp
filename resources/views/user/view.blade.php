@@ -3,10 +3,23 @@
 <div class="contents">
 
 
-   @if($user->verified==true)
+   @if($user->verified == true)
   
-      @if($user->email==$proposal->submitted_by)
-            <div class="containers">
+      @if(!($user->email == $proposals->submitted_by))
+
+
+          <hr>
+        <div class="mainboddy"> 
+             <div class="navsbarr">
+
+                <h2>Access denied</h2>
+               <h3> You are not listed as a collaborator in this proposal</h3>
+                 
+              </div>
+             
+        </div>
+      @else
+      <div class="containers">
       
         <div class="panel-group">
  
@@ -155,21 +168,7 @@
     
         </div>
          {{-- @endforeach --}}
-       @else
-          <hr>
-        <div class="mainboddy"> 
-             <div class="navsbarr">
-
-
-                <h2>Access denied</h2>
-               <h3> You are not listed as a collaborator in this proposal</h3>
-                
-               
-                
-               
-              </div>
-             
-        </div>
+       
         @endif
 
         
