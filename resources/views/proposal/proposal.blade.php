@@ -15,7 +15,8 @@
            <hr>
            <h6><a href="/sentproposals">Sent Proposals</a></h6>
            <hr>
-
+           <h6><a href="/userdrafts">Drafts</a></h6>
+           <hr>
            <h6><a href="/stageoneuser">Stage-1</a></h6>
            <hr>
            <h6><a href="/stagetwouser">Stage-2</a></h6>
